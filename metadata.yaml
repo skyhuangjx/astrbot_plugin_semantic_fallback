@@ -1,9 +1,9 @@
 name: astrbot_plugin_semantic_fallback
-display_name: 语义阻断自动切换
-short_desc: 将主模型的文本拒答转换为 AstraBot 原生备用模型切换信号。
+display_name: 模型拒答接管
+short_desc: 将主模型的文本拒答转换为 AstrBot 原生备用模型切换信号。
 desc: |
-  当主模型被中转站伪装成正常文本拒答时，将其识别为语义失败，
-  并交给 AstraBot 原有的备用模型切换流程处理。插件不接管模型选择，
+  当主模型的拒答文本被当成正常文本发送时（常见于反代场景），将其识别为语义失败，
+  并交给 AstrBot 原有的备用模型切换流程处理。
   主模型、备用模型、会话上下文和 prompt 均沿用 AstraBot 当前配置。
 version: 0.2.0
 author: skyhuangjx
