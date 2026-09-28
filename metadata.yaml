@@ -4,7 +4,7 @@ short_desc: 将主模型的文本拒答转换为 AstrBot 原生备用模型切�
 desc: |
   当主模型的拒答文本被当成正常文本发送时（常见于反代场景），将其识别为语义失败，
   并交给 AstrBot 原有的备用模型切换流程处理。
-  主模型、备用模型、会话上下文和 prompt 均沿用 AstraBot 当前配置。
+  主模型、备用模型、会话上下文和 prompt 均沿用 AstrBot 当前配置。
 version: 0.2.0
 author: skyhuangjx
 repo: https://github.com/skyhuangjx/astrbot_plugin_semantic_fallback
