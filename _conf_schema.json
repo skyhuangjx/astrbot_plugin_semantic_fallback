@@ -1,0 +1,17 @@
+{
+  "enabled": {"type": "bool", "description": "启用语义阻断检测和备用模型切换。", "default": true},
+  "minimum_matches": {"type": "int", "description": "触发语义阻断所需的最少规则命中数。", "hint": "填写 1 会更容易触发，填写 2 可以减少误判。", "default": 2},
+  "refusal_patterns": {
+    "type": "list",
+    "description": "用于识别主模型拒答文本的正则表达式列表。每项单独匹配。",
+    "default": [
+      "无法(?:参与|继续|提供|协助|完成)",
+      "不能(?:参与|继续|提供|协助|完成)",
+      "不(?:能|可以)进行.*(?:角色扮演|虚拟情境|此类内容)",
+      "(?:我是|作为)(?:一个)?(?:人工智能|大语言|AI).{0,30}(?:模型|助手)",
+      "如果您有其他.*(?:话题|问题).{0,20}(?:可以|能够)"
+    ]
+  },
+  "buffer_streaming_primary": {"type": "bool", "description": "在检测流式主模型响应前暂存内容。", "hint": "你目前未启用流式；此项用于防止未来误开启流式时泄露拒答片段。", "default": true},
+  "log_matches": {"type": "bool", "description": "检测到语义阻断时写入日志。", "default": true}
+}
